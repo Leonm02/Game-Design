@@ -8,6 +8,8 @@
 [Oo]bj/
 [Tt]emp/
 [Uu]nityGenerated/
+Logs/AssetImportWorker*.log
+
 # file on crash reports
 sysinfo.txt
 # Unity3D generated meta files
@@ -49,3 +51,6 @@ Box_Prototypy/.vscode/launch.json
 Box_Prototypy/.vscode/settings.json
 Box_Prototypy/Logs/AssetImportWorker0.log
 Box_Prototypy/Logs/shadercompiler-UnityShaderCompiler.exe0.log
+Box_Prototypy/Logs/shadercompiler-UnityShaderCompiler.exe0.log
+/Box_Prototypy/Logs
+*.log
