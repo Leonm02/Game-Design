@@ -54,3 +54,5 @@ Box_Prototypy/Logs/shadercompiler-UnityShaderCompiler.exe0.log
 Box_Prototypy/Logs/shadercompiler-UnityShaderCompiler.exe0.log
 /Box_Prototypy/Logs
 *.log
+Box_Prototypy/UserSettings/EditorUserSettings.asset
+Box_Prototypy/Assets/Scripts/Vertical Movement.cs.meta

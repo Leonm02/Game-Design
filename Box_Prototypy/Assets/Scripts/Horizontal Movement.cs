@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class HorizontalMovement : MonoBehaviour
 {
     public float moveDistance = 2f; // Distance to move left and right
@@ -16,6 +15,8 @@ public class HorizontalMovement : MonoBehaviour
         startPos = transform.position; // Store the starting position
     }
 
+
+    // Update is called once per frame
     void Update()
     {
         // Calculate the horizontal movement
@@ -31,17 +32,6 @@ public class HorizontalMovement : MonoBehaviour
         if (Mathf.Abs(transform.position.x - startPos.x) >= moveDistance)
         {
             moveRight = !moveRight; // Change direction
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            // Destroy the player GameObject
-            Destroy(other.gameObject);
-            // You can add your game over logic here, like showing a game over screen, resetting the level, etc.
-            Debug.Log("Player destroyed - Game Over!");
-        }
+        }   
     }
 }
