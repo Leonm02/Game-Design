@@ -1343,7 +1343,8 @@ GameObject:
   - component: {fileID: 924472415}
   - component: {fileID: 924472418}
   - component: {fileID: 924472417}
-  - component: {fileID: 924472416}
+  - component: {fileID: 924472419}
+  - component: {fileID: 924472420}
   m_Layer: 0
   m_Name: Enemy (1)
   m_TagString: Enemy
@@ -1360,26 +1361,12 @@ Transform:
   m_GameObject: {fileID: 924472414}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.63, y: -0.36, z: -0.03976349}
+  m_LocalPosition: {x: 2.63, y: -0.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1797749064}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &924472416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 924472414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 329b0963f4515ed4198461753f1a02e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveDistance: 2
-  moveSpeed: 2
 --- !u!58 &924472417
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1467,6 +1454,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &924472419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924472414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 685cbca1b80893b428a14db9c1152904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDistance: 2
+  moveSpeed: 2
+--- !u!114 &924472420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924472414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f589d026e282d4890dbde66c292349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1183401610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,7 +1825,8 @@ GameObject:
   - component: {fileID: 1345348337}
   - component: {fileID: 1345348340}
   - component: {fileID: 1345348339}
-  - component: {fileID: 1345348338}
+  - component: {fileID: 1345348341}
+  - component: {fileID: 1345348342}
   m_Layer: 0
   m_Name: Enemy (2)
   m_TagString: Enemy
@@ -1829,26 +1843,12 @@ Transform:
   m_GameObject: {fileID: 1345348336}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.99, y: -3.14, z: -0.03976349}
+  m_LocalPosition: {x: 5.99, y: -3.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1797749064}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1345348338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1345348336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14f589d026e282d4890dbde66c292349, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveDistance: 2
-  moveSpeed: 2
 --- !u!58 &1345348339
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1936,6 +1936,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1345348341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345348336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6487e3db7af768d4495686a684a78f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDistance: 2
+  moveSpeed: 2
+--- !u!114 &1345348342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345348336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f589d026e282d4890dbde66c292349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1433655763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2147,7 +2173,8 @@ GameObject:
   - component: {fileID: 1857159699}
   - component: {fileID: 1857159702}
   - component: {fileID: 1857159701}
-  - component: {fileID: 1857159700}
+  - component: {fileID: 1857159703}
+  - component: {fileID: 1857159704}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -2164,26 +2191,12 @@ Transform:
   m_GameObject: {fileID: 1857159698}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8, y: -3.16, z: -0.03976349}
+  m_LocalPosition: {x: -0.8, y: -3.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1797749064}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1857159700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857159698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 329b0963f4515ed4198461753f1a02e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveDistance: 2
-  moveSpeed: 2
 --- !u!58 &1857159701
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2271,6 +2284,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1857159703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857159698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 685cbca1b80893b428a14db9c1152904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDistance: 2
+  moveSpeed: 2
+--- !u!114 &1857159704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857159698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f589d026e282d4890dbde66c292349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2081243951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2321,7 +2360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c446379367039654582815c667552447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 3
+  timeLimit: 20
   timerText: {fileID: 2081243954}
   player: {fileID: 246942311}
   gameOverScreen: {fileID: 141127910}
