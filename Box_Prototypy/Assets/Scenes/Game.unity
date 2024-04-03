@@ -1345,6 +1345,7 @@ GameObject:
   - component: {fileID: 924472417}
   - component: {fileID: 924472419}
   - component: {fileID: 924472420}
+  - component: {fileID: 924472421}
   m_Layer: 0
   m_Name: Enemy (1)
   m_TagString: Enemy
@@ -1466,8 +1467,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685cbca1b80893b428a14db9c1152904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDistance: 2
-  moveSpeed: 2
 --- !u!114 &924472420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1480,6 +1479,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f589d026e282d4890dbde66c292349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverScreen: {fileID: 141127910}
+--- !u!114 &924472421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924472414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc008fef76aea3442bd999eb26a580ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDistance: 2
+  moveSpeed: 2
 --- !u!1 &1183401610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1962,6 +1976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f589d026e282d4890dbde66c292349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverScreen: {fileID: 141127910}
 --- !u!1 &1433655763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2175,6 +2190,7 @@ GameObject:
   - component: {fileID: 1857159701}
   - component: {fileID: 1857159703}
   - component: {fileID: 1857159704}
+  - component: {fileID: 1857159705}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -2296,8 +2312,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685cbca1b80893b428a14db9c1152904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDistance: 2
-  moveSpeed: 2
 --- !u!114 &1857159704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2310,6 +2324,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f589d026e282d4890dbde66c292349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverScreen: {fileID: 141127910}
+--- !u!114 &1857159705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857159698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc008fef76aea3442bd999eb26a580ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDistance: 2
+  moveSpeed: 2
 --- !u!1 &2081243951
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,11 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class EnemyMovement : MonoBehaviour
 {
+    public GameObject gameOverScreen; // Reference to the game over screen GameObject
+
     void Start()
     {
+        // Deactivate the game over screen GameObject at the start
+        if (gameOverScreen != null)
+        {
+            gameOverScreen.SetActive(false);
+        }
     }
 
     void Update()
@@ -19,7 +25,14 @@ public class EnemyMovement : MonoBehaviour
         {
             // Destroy the player GameObject
             Destroy(other.gameObject);
-            // You can add your game over logic here, like showing a game over screen, resetting the level, etc.
+
+            // Show the game over screen GameObject
+            if (gameOverScreen != null)
+            {
+                gameOverScreen.SetActive(true);
+            }
+
+            // You can add additional game over logic here if needed
             Debug.Log("Player destroyed - Game Over!");
         }
     }
