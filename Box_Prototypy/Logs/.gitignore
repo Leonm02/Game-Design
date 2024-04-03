@@ -1,0 +1,52 @@
+###
+# Unity folders and files
+###
+[Aa]ssets/AssetStoreTools*
+[Bb]uild/
+[Ll]ibrary/
+[Ll]ocal[Cc]ache/
+[Oo]bj/
+[Tt]emp/
+[Uu]nityGenerated/
+# file on crash reports
+sysinfo.txt
+# Unity3D generated meta files
+*.pidb.meta
+
+###
+# VS/MD solution and project files
+###
+[Ee]xportedObj/
+*.booproj
+*.csproj
+*.sln
+*.suo
+*.svd
+*.unityproj
+*.user
+*.userprefs
+*.pidb
+.DS_Store
+*.vsidx
+*.log
+
+###
+# OS generated
+###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+Box_Prototypy/Logs/AssetImportWorker1-prev.log
+Box_Prototypy/Logs/AssetImportWorker0-prev.log
+Box_Prototypy/Logs/AssetImportWorker0.log
+Box_Prototypy/Logs/AssetImportWorker1.log
+Box_Prototypy/.vscode/extensions.json
+Box_Prototypy/.vscode/launch.json
+Box_Prototypy/.vscode/settings.json
+Box_Prototypy/Logs/AssetImportWorker0.log
+Box_Prototypy/Logs/shadercompiler-UnityShaderCompiler.exe0.log
