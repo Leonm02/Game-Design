@@ -420,6 +420,7 @@ GameObject:
   - component: {fileID: 322653840}
   - component: {fileID: 322653841}
   - component: {fileID: 322653842}
+  - component: {fileID: 322653843}
   m_Layer: 0
   m_Name: Capsule (2)
   m_TagString: MovingPlatform
@@ -557,6 +558,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDistance: 2
   moveSpeed: 1
+--- !u!114 &322653843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322653837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6487e3db7af768d4495686a684a78f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDistance: 2
+  moveSpeed: 2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
