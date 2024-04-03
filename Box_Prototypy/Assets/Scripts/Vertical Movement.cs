@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConstantUpDownMovement : MonoBehaviour
+public class VerticalMovement : MonoBehaviour
 {
+    // Start is called before the first frame update
     public float moveDistance = 2f; // Distance to move up and down
     public float moveSpeed = 2f; // Speed of movement
 
@@ -23,14 +24,4 @@ public class ConstantUpDownMovement : MonoBehaviour
         transform.position = newPos;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            // Destroy the player GameObject
-            Destroy(other.gameObject);
-            // You can add your game over logic here, like showing a game over screen, resetting the level, etc.
-            Debug.Log("Player destroyed - Game Over!");
-        }
-    }
 }
