@@ -414,6 +414,8 @@ MonoBehaviour:
   speed: 5
   jumpForce: 10
   isonGround: 1
+  horizontalInput: 0
+  playerRb: {fileID: 0}
 --- !u!50 &246942313
 Rigidbody2D:
   serializedVersion: 4
@@ -473,8 +475,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: 0.007896185, y: -0.047374725}
+  m_Size: {x: 0.82629347, y: 1.9052505}
   m_Direction: 0
 --- !u!212 &246942315
 SpriteRenderer:
@@ -1340,7 +1342,6 @@ Transform:
   m_LocalScale: {x: 0.44065538, y: 0.7960092, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1225438839}
   - {fileID: 1904774502}
   - {fileID: 1592909498}
   m_Father: {fileID: 851106480}
@@ -1392,6 +1393,7 @@ GameObject:
   - component: {fileID: 924472417}
   - component: {fileID: 924472419}
   - component: {fileID: 924472420}
+  - component: {fileID: 924472421}
   m_Layer: 0
   m_Name: Enemy (1)
   m_TagString: Enemy
@@ -1527,9 +1529,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f589d026e282d4890dbde66c292349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
-=======
-  gameOverScreen: {fileID: 141127910}
 --- !u!114 &924472421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1542,7 +1541,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc008fef76aea3442bd999eb26a580ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
->>>>>>> Stashed changes
 --- !u!1 &1183401610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1785,11 +1783,11 @@ Transform:
   m_GameObject: {fileID: 1225438838}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.32, y: 0.26, z: 0}
+  m_LocalPosition: {x: -0.06, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 838896909}
+  m_Father: {fileID: 1904774502}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &1225438840
 SpriteRenderer:
@@ -1875,8 +1873,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.41973782, y: 0.002334438}
-  m_Size: {x: 0.16051337, y: 2.0090096}
+  m_Offset: {x: 0.4197379, y: 0.03619397}
+  m_Size: {x: 0.16051333, y: 1.6808249}
   m_Direction: 0
 --- !u!114 &1225438842
 MonoBehaviour:
@@ -2232,7 +2230,7 @@ Transform:
   m_GameObject: {fileID: 1592909497}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.02, y: 0.26, z: 0}
+  m_LocalPosition: {x: 5.58, y: 0.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2285,6 +2283,7 @@ GameObject:
   - component: {fileID: 1857159701}
   - component: {fileID: 1857159703}
   - component: {fileID: 1857159704}
+  - component: {fileID: 1857159705}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -2420,9 +2419,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f589d026e282d4890dbde66c292349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
-=======
-  gameOverScreen: {fileID: 141127910}
 --- !u!114 &1857159705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2460,13 +2456,13 @@ Transform:
   m_GameObject: {fileID: 1904774501}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.44, y: 0.26, z: 0}
+  m_LocalPosition: {x: -2.28, y: 0.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1225438839}
   m_Father: {fileID: 838896909}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
 --- !u!1 &2081243951
 GameObject:
   m_ObjectHideFlags: 0
