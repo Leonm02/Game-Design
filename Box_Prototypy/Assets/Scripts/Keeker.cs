@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DetectionEnemy : MonoBehaviour
+public class Keeker : MonoBehaviour
 {
     public float inactiveDuration = 5f; // Duration of inactivity
     public float activeDuration = 3f; // Duration of activity
