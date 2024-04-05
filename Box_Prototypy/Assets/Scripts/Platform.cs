@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingPlatform : MonoBehaviour
+public class Platform : MonoBehaviour
 {
     public Transform startPoint; // Define the start point in the Unity Editor
     public Transform endPoint; // Define the end point in the Unity Editor
