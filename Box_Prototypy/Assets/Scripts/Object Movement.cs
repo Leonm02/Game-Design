@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VerticalMovement : MonoBehaviour
+public class ObjectMovement : MonoBehaviour
 {
     public Transform startPoint; // Start point of movement
     public Transform endPoint; // End point of movement
