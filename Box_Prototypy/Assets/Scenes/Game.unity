@@ -1345,6 +1345,7 @@ GameObject:
   - component: {fileID: 882583065}
   - component: {fileID: 882583064}
   - component: {fileID: 882583067}
+  - component: {fileID: 882583068}
   m_Layer: 0
   m_Name: Scanner
   m_TagString: Enemy
@@ -1361,7 +1362,7 @@ Transform:
   m_GameObject: {fileID: 882583062}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.48, y: -0.58, z: 0}
+  m_LocalPosition: {x: -2.38, y: 1.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1482,6 +1483,20 @@ MonoBehaviour:
   distance: 10
   rotationspeed: 30
   gameOverScreen: {fileID: 141127910}
+--- !u!114 &882583068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882583062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6487e3db7af768d4495686a684a78f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDistance: 2
+  moveSpeed: 2
 --- !u!1 &924472414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,9 +1654,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 924472414}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc008fef76aea3442bd999eb26a580ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 78d06490cdfb287429c7ec61b5fae341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveDistance: 2
+  moveSpeed: 2
 --- !u!1 &1183401610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1883,7 +1900,7 @@ Transform:
   m_GameObject: {fileID: 1225438838}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -2.41, y: -2.1799998, z: 0}
+  m_LocalPosition: {x: -2.43, y: -0.74, z: 0}
   m_LocalScale: {x: 0.44065538, y: 0.7960091, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2483,9 +2500,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1857159698}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc008fef76aea3442bd999eb26a580ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 78d06490cdfb287429c7ec61b5fae341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveDistance: 2
+  moveSpeed: 2
 --- !u!1 &2081243951
 GameObject:
   m_ObjectHideFlags: 0

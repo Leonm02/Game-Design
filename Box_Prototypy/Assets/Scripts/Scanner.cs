@@ -52,23 +52,26 @@ public class Scanner : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(Vector3.forward * rotationspeed * Time.deltaTime);
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, distance);
+    //transform.Rotate(Vector3.forward * rotationspeed * Time.deltaTime);
+    // Determine the direction of the raycast (downwards)
+    Vector2 rayDirection = -transform.up;
 
-        // Set line positions
-        lineRenderer.SetPosition(0, transform.position);
-        lineRenderer.SetPosition(1, hitInfo.collider != null ? hitInfo.point : transform.position + transform.right * distance);
+    RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, rayDirection, distance);
 
-        // Set line colors
-        lineRenderer.startColor = hitInfo.collider != null ? Color.red : Color.green;
-        lineRenderer.endColor = hitInfo.collider != null ? Color.red : Color.green;
+    // Set line positions
+    lineRenderer.SetPosition(0, transform.position);
+    lineRenderer.SetPosition(1, hitInfo.collider != null ? hitInfo.point : (Vector2)transform.position + rayDirection * distance);
 
-        // Check if the player is hit by the ray
-        if (hitInfo.collider != null && hitInfo.collider.CompareTag("Player"))
-        {
-             gameOverScreen.SetActive(true);
-              Time.timeScale = 0f;
-        }
+    // Set line colors
+    lineRenderer.startColor = hitInfo.collider != null ? Color.red : Color.green;
+    lineRenderer.endColor = hitInfo.collider != null ? Color.red : Color.green;
+
+    // Check if the player is hit by the ray
+    if (hitInfo.collider != null && hitInfo.collider.CompareTag("Player"))
+    {
+        gameOverScreen.SetActive(true);
+        Time.timeScale = 0f;
+    }
     }
 }
 
