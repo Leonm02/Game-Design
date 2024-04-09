@@ -135,6 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inactiveDuration: 5
   activeDuration: 3
+  detectionRadius: 3
   activeColor: {r: 0, g: 0.122285366, b: 1, a: 1}
   inactiveColor: {r: 1, g: 1, b: 1, a: 1}
   gameOverScreen: {fileID: 0}

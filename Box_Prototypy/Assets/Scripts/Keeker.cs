@@ -4,6 +4,7 @@ public class Keeker : MonoBehaviour
 {
     public float inactiveDuration = 5f; // Duration of inactivity
     public float activeDuration = 3f; // Duration of activity
+    public float detectionRadius = 1.5f; // Radius for detection
     public Color activeColor = Color.red; // Color when active
     public Color inactiveColor = Color.white; // Color when inactive
     public GameObject gameOverScreen; // Reference to the game over screen
@@ -46,8 +47,8 @@ public class Keeker : MonoBehaviour
         // Check for collisions with the player
         if (isActive)
         {
-            // Check if the player enters the enemy's collider
-            Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, transform.localScale, 0f);
+            // Get colliders within the detection radius
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius);
             foreach (Collider2D collider in colliders)
             {
                 if (collider.CompareTag("Player"))
