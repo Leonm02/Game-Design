@@ -42,14 +42,20 @@ public class NewPlayerMovement : MonoBehaviour
         }
     }
 
-    void OnCollisionExit2D(Collision2D col)
+void OnCollisionExit2D(Collision2D col)
+{
+    if (col.gameObject.CompareTag("Ground") || col.gameObject.CompareTag("MovingPlatform"))
     {
-        if (col.gameObject.CompareTag("Ground") || col.gameObject.CompareTag("MovingPlatform"))
+        // Check if the parent GameObject is active before attempting to change the parent
+        if (col.transform.gameObject.activeSelf && transform.parent == col.transform)
         {
             transform.SetParent(null); // Unparent the player from the platform
             platform = null;
             isGrounded = false; // Player is no longer grounded when leaving the ground or platform
         }
     }
+}
+
+
 }
 
