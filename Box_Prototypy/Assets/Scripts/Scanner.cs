@@ -69,8 +69,8 @@ public class Scanner : MonoBehaviour
     // Check if the player is hit by the ray
     if (hitInfo.collider != null && hitInfo.collider.CompareTag("Player"))
     {
+        Destroy(hitInfo.collider.gameObject);
         gameOverScreen.SetActive(true);
-        Time.timeScale = 0f;
     }
     }
 }
