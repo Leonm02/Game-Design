@@ -1,31 +1,3 @@
-/*using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Scanner : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-      Physics2D.queriesStartInColliders = false;  
-    }
-
-    // Update is called once per frame
-    public float distance;
-    public float rotationspeed;
-    void Update()
-    {
-        transform.Rotate(Vector3.forward*rotationspeed*Time.deltaTime);
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, distance);
-        if(hitInfo.collider != null){
-            Debug.DrawLine ( transform.position, hitInfo.point, Color.red);
-        }
-        else{
-            Debug.DrawLine(transform.position, transform.position + transform.right * distance, Color.green );
-        }
-    }
-}
-*/
 using UnityEngine;
 
 public class Scanner : MonoBehaviour
@@ -52,26 +24,39 @@ public class Scanner : MonoBehaviour
 
     void Update()
     {
-    //transform.Rotate(Vector3.forward * rotationspeed * Time.deltaTime);
-    // Determine the direction of the raycast (downwards)
-    Vector2 rayDirection = -transform.up;
+        // Determine if the game over screen is active
+        bool gameOverActive = gameOverScreen.activeSelf;
 
-    RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, rayDirection, distance);
+        // If game over screen is active, disable LineRenderer and return
+        if (gameOverActive)
+        {
+            lineRenderer.enabled = false;
+            return;
+        }
+        else
+        {
+            // If game over screen is not active, enable LineRenderer
+            lineRenderer.enabled = true;
+        }
 
-    // Set line positions
-    lineRenderer.SetPosition(0, transform.position);
-    lineRenderer.SetPosition(1, hitInfo.collider != null ? hitInfo.point : (Vector2)transform.position + rayDirection * distance);
+        // Determine the direction of the raycast (downwards)
+        Vector2 rayDirection = -transform.up;
 
-    // Set line colors
-    lineRenderer.startColor = hitInfo.collider != null ? Color.red : Color.green;
-    lineRenderer.endColor = hitInfo.collider != null ? Color.red : Color.green;
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, rayDirection, distance);
 
-    // Check if the player is hit by the ray
-    if (hitInfo.collider != null && hitInfo.collider.CompareTag("Player"))
-    {
-        Destroy(hitInfo.collider.gameObject);
-        gameOverScreen.SetActive(true);
-    }
+        // Set line positions
+        lineRenderer.SetPosition(0, transform.position);
+        lineRenderer.SetPosition(1, hitInfo.collider != null ? hitInfo.point : (Vector2)transform.position + rayDirection * distance);
+
+        // Set line colors
+        lineRenderer.startColor = hitInfo.collider != null ? Color.red : Color.green;
+        lineRenderer.endColor = hitInfo.collider != null ? Color.red : Color.green;
+
+        // Check if the player is hit by the ray
+        if (hitInfo.collider != null && hitInfo.collider.CompareTag("Player"))
+        {
+            Destroy(hitInfo.collider.gameObject);
+            gameOverScreen.SetActive(true);
+        }
     }
 }
-

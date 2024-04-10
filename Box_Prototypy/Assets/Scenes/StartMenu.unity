@@ -700,7 +700,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: -49.9}
+  m_AnchoredPosition: {x: 0, y: -49.9}
   m_SizeDelta: {x: 51.7, y: 53.5273}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &955723559
@@ -891,8 +891,8 @@ Canvas:
   m_GameObject: {fileID: 1050894651}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 168998580}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1568,7 +1568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.64779866, g: 0.32389924, b: 0.32389924, a: 0.5686275}
+  m_Color: {r: 0.56078434, g: 0.34901962, b: 0.34901962, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class FinishPoint : MonoBehaviour
 {
+
+public string SceneToLoad;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Check if the colliding object is the player.
@@ -10,7 +12,7 @@ public class FinishPoint : MonoBehaviour
         {
             Debug.Log("Player reached the finish point.");
             // Load the Level Complete scene.
-            SceneManager.LoadScene("LevelComplete");
+            SceneManager.LoadScene(SceneToLoad);
         }
     }
 }
