@@ -675,7 +675,6 @@ GameObject:
   - component: {fileID: 955723562}
   - component: {fileID: 955723561}
   - component: {fileID: 955723560}
-  - component: {fileID: 955723559}
   m_Layer: 5
   m_Name: Level 2
   m_TagString: Untagged
@@ -703,20 +702,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -49.9}
   m_SizeDelta: {x: 51.7, y: 53.5273}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &955723559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 955723557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de32c7f2d5db5514c9fed7cd71464d1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 8852913406580830596, guid: 9042ccfd08f427f42a0b0401e3454121, type: 3}
-  NameOfLevel: Level 2
 --- !u!114 &955723560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,7 +758,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 955723559}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: NextLevelButton, Assembly-CSharp
         m_MethodName: LoadNextLevel
         m_Mode: 1
