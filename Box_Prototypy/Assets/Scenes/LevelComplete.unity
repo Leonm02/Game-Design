@@ -640,6 +640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de32c7f2d5db5514c9fed7cd71464d1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPrefab: {fileID: 8852913406580830596, guid: 9042ccfd08f427f42a0b0401e3454121, type: 3}
   NameOfLevel: Level 2
 --- !u!114 &1444306241
 MonoBehaviour:
