@@ -12,7 +12,7 @@ public class NextLevelButton : MonoBehaviour
         SceneManager.LoadScene(NameOfLevel);
     }
 
-    void Start()
+    /*void Start()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
@@ -31,5 +31,5 @@ public class NextLevelButton : MonoBehaviour
             
 
         }
-    }
+    }*/
 }
