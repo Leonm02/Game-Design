@@ -1067,6 +1067,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Finish Point
       objectReference: {fileID: 0}
+    - target: {fileID: 4761420441525378365, guid: f531d562c7a59b44da889e00a16e296d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.46932834
+      objectReference: {fileID: 0}
+    - target: {fileID: 4761420441525378365, guid: f531d562c7a59b44da889e00a16e296d, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.94735265
+      objectReference: {fileID: 0}
     - target: {fileID: 4765210910601490716, guid: f531d562c7a59b44da889e00a16e296d, type: 3}
       propertyPath: m_SortingOrder
       value: 20
@@ -1944,7 +1952,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
