@@ -567,7 +567,7 @@ Transform:
   m_GameObject: {fileID: 225030306}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.3, y: -0.85, z: 0}
+  m_LocalPosition: {x: 14.3, y: -1.05, z: 0}
   m_LocalScale: {x: 0.42076698, y: 0.42076698, z: 0.42076698}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -625,7 +625,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 0c8b25e796cfa244db600769aeb3fbbe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1066,6 +1066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Finish Point
       objectReference: {fileID: 0}
+    - target: {fileID: 4765210910601490716, guid: f531d562c7a59b44da889e00a16e296d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6349391204758275787, guid: f531d562c7a59b44da889e00a16e296d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 49.47
@@ -1332,7 +1336,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3949919, y: -0.60113996, z: -10}
+  m_LocalPosition: {x: -3.2467175, y: -0.60644, z: -10}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3064,7 +3068,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 0c8b25e796cfa244db600769aeb3fbbe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3627,6 +3631,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4650123552081350719, guid: 9042ccfd08f427f42a0b0401e3454121, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8852913406580830596, guid: 9042ccfd08f427f42a0b0401e3454121, type: 3}
       propertyPath: m_Name
       value: Player
