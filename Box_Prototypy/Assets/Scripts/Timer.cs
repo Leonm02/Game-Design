@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
     public GameObject player; // Reference to the player GameObject
     public GameObject gameOverScreen; // Reference to the game over screen GameObject
 
-    private float currentTime; // Current time left
+    public static float currentTime; // Current time left
     private bool isGameOver = false; // Flag to check if the game is over
 
     void Start()
@@ -82,5 +82,10 @@ public class Timer : MonoBehaviour
         {
             Debug.LogWarning("Timer: Game Over Screen GameObject is not assigned. Please assign a GameObject to the gameOverScreen variable in the Timer script.");
         }
+    }
+
+    void PunishmentTime()
+    {
+        
     }
 }
