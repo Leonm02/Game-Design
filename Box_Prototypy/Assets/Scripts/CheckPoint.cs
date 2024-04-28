@@ -1,20 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
-    
-    private GameMaster gm;
-
-    void Start(){
-        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+   private void OnTriggerEnter2D(Collider2D collision){
+    if (collision.transform.tag == "Player"){
+        GameMaster.lastCheckPointPos = transform.position;
     }
-
-    void OnTriggerEnter2D(Collider2D other){
-        if(other.CompareTag("Player")){
-            gm.lastCheckPointPos = transform.position;
-            Debug.Log("Checkpoint reached. Last checkpoint position updated to: " + gm.lastCheckPointPos);
-        }
-    }
+   }
 }
