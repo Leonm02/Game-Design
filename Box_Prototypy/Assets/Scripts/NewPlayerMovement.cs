@@ -1,85 +1,62 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class NewPlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
-    SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
     float dirX, moveSpeed = 5f;
     bool isGrounded; // Flag to track if the player is grounded
-    bool isJumping; // Flag to track if the player is currently jumping
-    Animator animator; // Reference to the Animator component
-    float lastDirX; // Variable to store the last horizontal direction
+    Transform platform; // Reference to the moving platform the player is on
 
+    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>(); // Get the Animator component
-        spriteRenderer = GetComponent<SpriteRenderer>(); // Get the SpriteRenderer component
     }
 
+    // Update is called once per frame
     void Update()
     {
-        dirX = Input.GetAxisRaw("Horizontal");
+        dirX = Input.GetAxisRaw("Horizontal") * moveSpeed;
 
-        // Flip the player sprite if moving left
-        if (dirX != 0)
-        {
-            lastDirX = dirX; // Update the last horizontal direction
-            spriteRenderer.flipX = dirX > 0;
-        }
-
-        // Check if the player presses the Jump button and is grounded
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.AddForce(Vector2.up * 400f);
-            isJumping = true; // Set the jumping flag to true
-            animator.SetBool("IsJumping", true); // Trigger the jump animation
+            isGrounded = false; // Player is no longer grounded after jumping
         }
-
-        // Update the animation parameters based on the player's movement
-        UpdateAnimationParameters();
     }
 
     void FixedUpdate()
     {
-        // If the player is not pressing any movement keys, set the velocity to zero
-        if (dirX == 0)
-        {
-            rb.velocity = new Vector2(0, rb.velocity.y);
-        }
-        else
-        {
-            rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
-        }
+        rb.velocity = new Vector2(dirX, rb.velocity.y);
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Ground") || col.gameObject.CompareTag("MovingPlatform"))
         {
+            platform = col.transform;
+            transform.SetParent(platform); // Parent the player to the platform
             isGrounded = true; // Player is grounded when colliding with the ground or platform
-            if (isJumping)
-            {
-                isJumping = false; // Reset the jumping flag when grounded
-                animator.SetBool("IsJumping", false); // Stop the jump animation
-            }
         }
     }
 
-    void OnCollisionExit2D(Collision2D col)
+void OnCollisionExit2D(Collision2D col)
+{
+    if (col.gameObject.CompareTag("Ground") || col.gameObject.CompareTag("MovingPlatform"))
     {
-        if (col.gameObject.CompareTag("Ground") || col.gameObject.CompareTag("MovingPlatform"))
+        // Check if the parent GameObject is active before attempting to change the parent
+        if (col.transform.gameObject.activeSelf && transform.parent == col.transform)
         {
+            transform.SetParent(null); // Unparent the player from the platform
+            platform = null;
             isGrounded = false; // Player is no longer grounded when leaving the ground or platform
         }
     }
-
-    void UpdateAnimationParameters()
-    {
-        // Set the "Speed" parameter in the animator based on the player's horizontal velocity
-        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
-        
-        // Set the "IsGrounded" parameter in the animator based on whether the player is grounded or not
-        animator.SetBool("IsGrounded", isGrounded);
-    }
 }
+
+
+
+}
+

@@ -7,9 +7,11 @@ public class ButtonLoader : MonoBehaviour
 
     public void LoadScene()
     {
-        if (GameManager.Instance != null)
+        GameManager gameManager = FindObjectOfType<GameManager>();
+
+        if (gameManager != null)
         {
-            GameManager.Instance.LoadLevel(sceneName);
+            gameManager.LoadLevel(sceneName);
         }
         else
         {

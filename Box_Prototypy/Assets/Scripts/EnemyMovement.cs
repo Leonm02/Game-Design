@@ -19,21 +19,4 @@ public class EnemyMovement : MonoBehaviour
     {
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            // Destroy the player GameObject
-            Destroy(other.gameObject);
-
-            // Show the game over screen GameObject
-            if (gameOverScreen != null)
-            {
-                gameOverScreen.SetActive(true);
-            }
-
-            // You can add additional game over logic here if needed
-            Debug.Log("Player destroyed - Game Over!");
-        }
-    }
 }
