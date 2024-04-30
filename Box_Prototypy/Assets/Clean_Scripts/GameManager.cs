@@ -4,8 +4,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
-    private string previousSceneName;
-    private Vector3 playerPosition;
 
     // Ensure there's only one instance of GameManager
     private void Awake()
@@ -26,11 +24,13 @@ public class GameManager : MonoBehaviour
         get { return instance; }
     }
 
-    // Your GameManager functions go here
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
     public void LoadLevel(string levelName)
     {
         SceneManager.LoadScene(levelName);
     }
-
 }
