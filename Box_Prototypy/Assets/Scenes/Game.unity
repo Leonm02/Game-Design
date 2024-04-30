@@ -198,7 +198,11 @@ GameObject:
   - component: {fileID: 57655322}
   m_Layer: 0
   m_Name: Checkpoint 01
+<<<<<<< Updated upstream
   m_TagString: Untagged
+=======
+  m_TagString: Checkpoint
+>>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -777,6 +781,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8882183955421977235, guid: 9042ccfd08f427f42a0b0401e3454121, type: 3}
   m_PrefabInstance: {fileID: 4155985230879630239}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+--- !u!114 &246942321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246942311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4908af58863c94b4891db9cb385e1397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes
 --- !u!1 &264876000
 GameObject:
   m_ObjectHideFlags: 0
@@ -2023,7 +2042,11 @@ GameObject:
   - component: {fileID: 1003233429}
   m_Layer: 0
   m_Name: Checkpoint 02
+<<<<<<< Updated upstream
   m_TagString: Untagged
+=======
+  m_TagString: Checkpoint
+>>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3501,7 +3524,14 @@ PrefabInstance:
     - {fileID: 2995679272696389603, guid: 9042ccfd08f427f42a0b0401e3454121, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
+<<<<<<< Updated upstream
     m_AddedComponents: []
+=======
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8852913406580830596, guid: 9042ccfd08f427f42a0b0401e3454121, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 246942321}
+>>>>>>> Stashed changes
   m_SourcePrefab: {fileID: 100100000, guid: 9042ccfd08f427f42a0b0401e3454121, type: 3}
 --- !u!1001 &5360954168692069564
 PrefabInstance:

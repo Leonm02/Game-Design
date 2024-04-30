@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - MovingPlatform
   - GM
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
