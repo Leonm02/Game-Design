@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
-   private void OnTriggerEnter2D(Collider2D collision){
-    if (collision.transform.tag == "Player"){
+  private void OnTriggerEnter2D(Collider2D collision)
+{
+    Debug.Log("Checkpoint triggered!");
+    if (collision.CompareTag("Player"))
+    {
         GameMaster.lastCheckPointPos = transform.position;
     }
-   }
+}
+
 }
