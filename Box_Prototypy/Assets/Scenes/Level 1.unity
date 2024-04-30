@@ -774,27 +774,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8882183955421977235, guid: 9042ccfd08f427f42a0b0401e3454121, type: 3}
   m_PrefabInstance: {fileID: 4155985230879630239}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &246942317
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 246942311}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d24a18a09b68a0c4cbd940f5ebaea093, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &264876000
 GameObject:
   m_ObjectHideFlags: 0
@@ -4091,10 +4070,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4650123552081350719, guid: 9042ccfd08f427f42a0b0401e3454121, type: 3}
-      propertyPath: m_FlipY
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4650123552081350719, guid: 9042ccfd08f427f42a0b0401e3454121, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 03059c7dc6ff5da49bd9328060b2539a, type: 3}
@@ -4189,10 +4164,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8852913406580830596, guid: 9042ccfd08f427f42a0b0401e3454121, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 246942317}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9042ccfd08f427f42a0b0401e3454121, type: 3}
 --- !u!1001 &5360954168692069564
 PrefabInstance:
