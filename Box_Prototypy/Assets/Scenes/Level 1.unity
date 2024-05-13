@@ -3925,6 +3925,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Virtual Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 1156985092793747557, guid: 287a3168886f8fb45a06ed792925a55c, type: 3}
+      propertyPath: m_XDamping
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 4575284645091368231, guid: 287a3168886f8fb45a06ed792925a55c, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
