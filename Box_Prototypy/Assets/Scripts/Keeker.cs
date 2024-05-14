@@ -18,11 +18,8 @@ public class Keeker : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        // Set initial color and sprite
-        spriteRenderer.color = inactiveColor;
-        spriteRenderer.sprite = inactiveSprite;
-        // Start the inactive timer
-        timer = inactiveDuration;
+        spriteRenderer.color = inactiveColor; // Set initial color to inactive color
+        spriteRenderer.sprite = inactiveSprite; // Set initial sprite to inactive sprite
     }
 
     void Update()
@@ -31,47 +28,39 @@ public class Keeker : MonoBehaviour
 
         if (isActive)
         {
-            // Change color and sprite to active
+            // Change color to active color
             spriteRenderer.color = activeColor;
-            spriteRenderer.sprite = activeSprite;
+            spriteRenderer.sprite = activeSprite; // Change sprite to active sprite
 
             if (timer <= 0f)
             {
-                // Switch to inactive state
                 isActive = false;
-                // Reset timer and change color and sprite to inactive
                 timer = inactiveDuration;
-                spriteRenderer.color = inactiveColor;
-                spriteRenderer.sprite = inactiveSprite;
+                spriteRenderer.color = inactiveColor; // Change color back to inactive color
+                spriteRenderer.sprite = inactiveSprite; // Change sprite back to inactive sprite
             }
         }
         else
         {
             if (timer <= 0f)
             {
-                // Switch to active state
                 isActive = true;
-                // Reset timer and change color and sprite to active
                 timer = activeDuration;
-                spriteRenderer.color = activeColor;
-                spriteRenderer.sprite = activeSprite;
             }
         }
+    }
 
-        // Check for collisions with the player if the enemy is active
-        if (isActive)
+    // Check for collisions with the player when the enemy becomes active
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (isActive && other.CompareTag("Player"))
         {
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius);
-            foreach (Collider2D collider in colliders)
-            {
-                if (collider.CompareTag("Player"))
-                {
-                    // Player collided with active enemy, trigger game over screen
-                    gameOverScreen.SetActive(true);
-                    Time.timeScale = 0f;
-                    return; // Exit loop once player is detected
-                }
-            }
+            // Destroy the player
+            Destroy(other.gameObject);
+
+            // Trigger game over screen
+            gameOverScreen.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 }

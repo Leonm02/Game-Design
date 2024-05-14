@@ -795,6 +795,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keeker
       objectReference: {fileID: 0}
+    - target: {fileID: 2029493664559219955, guid: 8182ba68d1f82a74780e1f8bf9f09517, type: 3}
+      propertyPath: m_Radius
+      value: 27.023254
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029493664559219955, guid: 8182ba68d1f82a74780e1f8bf9f09517, type: 3}
+      propertyPath: m_Offset.x
+      value: -3.9018173
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029493664559219955, guid: 8182ba68d1f82a74780e1f8bf9f09517, type: 3}
+      propertyPath: m_Offset.y
+      value: 3.439758
+      objectReference: {fileID: 0}
     - target: {fileID: 5979454980207949157, guid: 8182ba68d1f82a74780e1f8bf9f09517, type: 3}
       propertyPath: activeSprite
       value: 
