@@ -18,8 +18,11 @@ public class Keeker : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.color = inactiveColor; // Set initial color to inactive color
-        spriteRenderer.sprite = inactiveSprite; // Set initial sprite to inactive sprite
+        // Set initial color and sprite
+        spriteRenderer.color = inactiveColor;
+        spriteRenderer.sprite = inactiveSprite;
+        // Start the inactive timer
+        timer = inactiveDuration;
     }
 
     void Update()
@@ -28,31 +31,36 @@ public class Keeker : MonoBehaviour
 
         if (isActive)
         {
-            // Change color to active color
+            // Change color and sprite to active
             spriteRenderer.color = activeColor;
-            spriteRenderer.sprite = activeSprite; // Change sprite to active sprite
+            spriteRenderer.sprite = activeSprite;
 
             if (timer <= 0f)
             {
+                // Switch to inactive state
                 isActive = false;
+                // Reset timer and change color and sprite to inactive
                 timer = inactiveDuration;
-                spriteRenderer.color = inactiveColor; // Change color back to inactive color
-                spriteRenderer.sprite = inactiveSprite; // Change sprite back to inactive sprite
+                spriteRenderer.color = inactiveColor;
+                spriteRenderer.sprite = inactiveSprite;
             }
         }
         else
         {
             if (timer <= 0f)
             {
+                // Switch to active state
                 isActive = true;
+                // Reset timer and change color and sprite to active
                 timer = activeDuration;
+                spriteRenderer.color = activeColor;
+                spriteRenderer.sprite = activeSprite;
             }
         }
 
-        // Check for collisions with the player
+        // Check for collisions with the player if the enemy is active
         if (isActive)
         {
-            // Get colliders within the detection radius
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius);
             foreach (Collider2D collider in colliders)
             {

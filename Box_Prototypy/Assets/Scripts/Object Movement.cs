@@ -10,6 +10,7 @@ public class ObjectMovement : MonoBehaviour
 
     private Vector3 startPos; // Starting position
     private Vector3 endPos; // Ending position
+    private Vector3 lastPos; // Last position for determining movement direction
 
     void Start()
     {
@@ -19,6 +20,9 @@ public class ObjectMovement : MonoBehaviour
 
         if (endPoint != null)
             endPos = endPoint.position;
+
+        // Set the initial last position
+        lastPos = transform.position;
     }
 
     void Update()
@@ -34,6 +38,23 @@ public class ObjectMovement : MonoBehaviour
 
         // Move the object to the new position
         transform.position = newPos;
+
+        // Determine movement direction
+        Vector3 currentPos = transform.position;
+        Vector3 direction = currentPos - lastPos;
+
+        // Flip the sprite based on movement direction
+        if (direction.x > 0) // Moving to the right
+        {
+            transform.localScale = new Vector3((float)0.1139, (float)0.1139, (float)0.1139); // Sprite faces right
+        }
+        else if (direction.x < 0) // Moving to the left
+        {
+            transform.localScale = new Vector3((float)-0.1139, (float)0.1139, (float)0.1139); // Sprite faces left (flipped horizontally)
+        }
+
+        // Update the last position
+        lastPos = currentPos;
     }
 
     // Draw Gizmos in the Unity Editor
@@ -47,4 +68,3 @@ public class ObjectMovement : MonoBehaviour
         }
     }
 }
-
