@@ -50,7 +50,7 @@ public class Timer : MonoBehaviour
         int minutes = Mathf.FloorToInt(currentTime / 60f);
         int seconds = Mathf.FloorToInt(currentTime % 60f);
         string timerString = string.Format("{0:00}:{1:00}", minutes, seconds);
-        if(timerText != null)
+        if (timerText != null)
             timerText.text = timerString;
         else
             Debug.LogError("Timer: Text component is not assigned. Please assign a Text component to the Timer script.");
@@ -84,8 +84,26 @@ public class Timer : MonoBehaviour
         }
     }
 
-    void PunishmentTime()
+    public void PunishmentTime(float punishmentSeconds)
     {
-        
+        if (!isGameOver)
+        {
+            currentTime -= punishmentSeconds;
+            if (currentTime <= 0f)
+            {
+                currentTime = 0f; // Ensure the timer does not go below zero
+                GameOver();
+            }
+            UpdateTimerDisplay();
+        }
+    }
+
+    public void ResetTimer()
+    {
+        if (!isGameOver)
+        {
+            currentTime = timeLimit;
+            UpdateTimerDisplay();
+        }
     }
 }
