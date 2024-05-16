@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Scanner : MonoBehaviour
 {
+    private GameManager gameManager;
     public float distance;
     public float rotationspeed;
     public Material lineMaterial; // Material to assign to the Line Renderer
@@ -26,6 +27,9 @@ public class Scanner : MonoBehaviour
 
         // Assign the material to the Line Renderer
         lineRenderer.material = lineMaterial;
+
+        // Find the Manager in the scene
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     void Update()
@@ -50,12 +54,14 @@ public class Scanner : MonoBehaviour
         if (hitInfo.collider != null && hitInfo.collider.CompareTag("Player"))
         {
             // Get the GameController component from the player
-            GameController playerController = hitInfo.collider.GetComponent<GameController>();
+            /*GameController playerController = hitInfo.collider.GetComponent<GameController>();
             if (playerController != null)
             {
                 // Call the Die method
                 playerController.Die();
-            }
+            }*/
+            Debug.Log("Enemy Collision detected.");
+            gameManager.GameOver();
         }
     }
 }
