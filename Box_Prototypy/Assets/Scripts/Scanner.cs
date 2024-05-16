@@ -1,38 +1,9 @@
-/*using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Scanner : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-      Physics2D.queriesStartInColliders = false;  
-    }
-
-    // Update is called once per frame
-    public float distance;
-    public float rotationspeed;
-    void Update()
-    {
-        transform.Rotate(Vector3.forward*rotationspeed*Time.deltaTime);
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, distance);
-        if(hitInfo.collider != null){
-            Debug.DrawLine ( transform.position, hitInfo.point, Color.red);
-        }
-        else{
-            Debug.DrawLine(transform.position, transform.position + transform.right * distance, Color.green );
-        }
-    }
-}
-*/
 using UnityEngine;
 
 public class Scanner : MonoBehaviour
 {
     public float distance;
     public float rotationspeed;
-    public GameObject gameOverScreen;
     public Material lineMaterial; // Material to assign to the Line Renderer
     public Vector2 lineOffset = Vector2.zero; // Offset for the line start position
     private LineRenderer lineRenderer;
@@ -78,10 +49,13 @@ public class Scanner : MonoBehaviour
         // Check if the player is hit by the ray
         if (hitInfo.collider != null && hitInfo.collider.CompareTag("Player"))
         {
-            gameOverScreen.SetActive(true);
-            Time.timeScale = 0f;
+            // Get the GameController component from the player
+            GameController playerController = hitInfo.collider.GetComponent<GameController>();
+            if (playerController != null)
+            {
+                // Call the Die method
+                playerController.Die();
+            }
         }
     }
 }
-
-

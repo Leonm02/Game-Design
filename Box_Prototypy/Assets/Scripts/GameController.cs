@@ -7,13 +7,11 @@ public class GameController : MonoBehaviour
     Vector2 checkpointPos;
     SpriteRenderer spriteRenderer;
 
-
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         checkpointPos = transform.position;
@@ -36,7 +34,8 @@ public class GameController : MonoBehaviour
     {
         checkpointPos = pos;
     }
-    void Die()
+
+    public void Die()
     {
         StartCoroutine(Respawn(0.5f));
     }
@@ -47,7 +46,6 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(duration);
         transform.position = checkpointPos;
         spriteRenderer.enabled = true;
-
 
         // Reset the timer
         if (timer != null)

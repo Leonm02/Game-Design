@@ -2,24 +2,28 @@ using UnityEngine;
 
 public class Keeker : MonoBehaviour
 {
-    public float inactiveDuration = 5f; // Duration of inactivity
-    public float activeDuration = 3f; // Duration of activity
-    public float detectionRadius = 1.5f; // Radius for detection
-    public Color activeColor = Color.red; // Color when active
-    public Color inactiveColor = Color.white; // Color when inactive
-    public Sprite activeSprite; // Sprite when active
-    public Sprite inactiveSprite; // Sprite when inactive
-    public GameObject gameOverScreen; // Reference to the game over screen
+    public float inactiveDuration = 5f;
+    public float activeDuration = 3f;
+    public float detectionRadius = 1.5f;
+    public Color activeColor = Color.red;
+    public Color inactiveColor = Color.white;
+    public Sprite activeSprite;
+    public Sprite inactiveSprite;
 
-    private bool isActive = false; // Flag to track if enemy is active
-    private float timer = 0f; // Timer for duration
+    private bool isActive = false;
+    private float timer = 0f;
     private SpriteRenderer spriteRenderer;
+    private CircleCollider2D detectionCollider;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.color = inactiveColor; // Set initial color to inactive color
-        spriteRenderer.sprite = inactiveSprite; // Set initial sprite to inactive sprite
+        detectionCollider = gameObject.AddComponent<CircleCollider2D>();
+        detectionCollider.isTrigger = true;
+        detectionCollider.radius = detectionRadius;
+
+        SetInactiveState();
+        timer = inactiveDuration;
     }
 
     void Update()
@@ -28,39 +32,59 @@ public class Keeker : MonoBehaviour
 
         if (isActive)
         {
-            // Change color to active color
-            spriteRenderer.color = activeColor;
-            spriteRenderer.sprite = activeSprite; // Change sprite to active sprite
-
             if (timer <= 0f)
             {
-                isActive = false;
+                SetInactiveState();
                 timer = inactiveDuration;
-                spriteRenderer.color = inactiveColor; // Change color back to inactive color
-                spriteRenderer.sprite = inactiveSprite; // Change sprite back to inactive sprite
             }
         }
         else
         {
             if (timer <= 0f)
             {
-                isActive = true;
+                SetActiveState();
                 timer = activeDuration;
             }
         }
     }
 
-    // Check for collisions with the player when the enemy becomes active
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (isActive && other.CompareTag("Player"))
+        {
+            // Trigger the player's death sequence
+            GameController playerController = other.GetComponent<GameController>();
+            if (playerController != null)
+            {
+                playerController.Die();
+            }
+        }
+    }
+
     void OnTriggerStay2D(Collider2D other)
     {
         if (isActive && other.CompareTag("Player"))
         {
-            // Destroy the player
-            Destroy(other.gameObject);
-
-            // Trigger game over screen
-            gameOverScreen.SetActive(true);
-            Time.timeScale = 0f;
+            // Trigger the player's death sequence
+            GameController playerController = other.GetComponent<GameController>();
+            if (playerController != null)
+            {
+                playerController.Die();
+            }
         }
+    }
+
+    private void SetActiveState()
+    {
+        isActive = true;
+        spriteRenderer.color = activeColor;
+        spriteRenderer.sprite = activeSprite;
+    }
+
+    private void SetInactiveState()
+    {
+        isActive = false;
+        spriteRenderer.color = inactiveColor;
+        spriteRenderer.sprite = inactiveSprite;
     }
 }
