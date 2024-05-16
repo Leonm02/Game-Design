@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Keeker : MonoBehaviour
 {
-    private GameManager gameManager;
     public float inactiveDuration = 5f;
     public float activeDuration = 3f;
     public float detectionRadius = 1.5f;
@@ -26,8 +25,6 @@ public class Keeker : MonoBehaviour
         SetInactiveState();
         timer = inactiveDuration;
 
-        // Find the Manager in the scene
-        gameManager = FindObjectOfType<GameManager>();
     }
 
     void Update()
@@ -57,13 +54,11 @@ public class Keeker : MonoBehaviour
         if (isActive && other.CompareTag("Player"))
         {
             // Trigger the player's death sequence
-           /* GameController playerController = other.GetComponent<GameController>();
+           GameController playerController = other.GetComponent<GameController>();
             if (playerController != null)
             {
                 playerController.Die();
-            }*/
-            Debug.Log("Enemy Collision detected.");
-            gameManager.GameOver();
+            }
         }
     }
 
@@ -72,13 +67,11 @@ public class Keeker : MonoBehaviour
         if (isActive && other.CompareTag("Player"))
         {
             // Trigger the player's death sequence
-           /* GameController playerController = other.GetComponent<GameController>();
+            GameController playerController = other.GetComponent<GameController>();
             if (playerController != null)
             {
                 playerController.Die();
-            }*/
-            Debug.Log("Enemy Collision detected.");
-            gameManager.GameOver();
+            }
 
         }
     }
