@@ -14,11 +14,11 @@ public class PlayerCollision : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         // Call the GameOver function from the Manager script
-        if (collision.transform.tag == ("Enemy"))
+        /*if (collision.transform.tag == ("Enemy"))
         {
-            /*Debug.Log("Enemy Collision detected.");
-            gameManager.GameOver();*/
-        }
+            Debug.Log("Enemy Collision detected.");
+            gameManager.GameOver();
+        }*/
 
         if (collision.transform.tag == ("Finish Point"))
         {
