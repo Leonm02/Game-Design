@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewPlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
     SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
@@ -73,4 +73,7 @@ public class NewPlayerMovement : MonoBehaviour
         // Set the "IsGrounded" parameter in the animator based on whether the player is grounded or not
         animator.SetBool("IsGrounded", isGrounded);
     }
+
+
 }
+
