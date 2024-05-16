@@ -3,34 +3,87 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager instance;
+    public GameObject pauseMenu;
 
-    // Ensure there's only one instance of GameManager
-    private void Awake()
+    public GameObject gameOverMenu;
+
+    public GameObject levelCompleteMenu;
+    public bool isPaused;
+
+    public bool gameOver;
+
+    public bool levelComplete;
+
+    void Start()
     {
-        if (instance == null)
+        // Ensure pauseMenu is initially inactive
+        pauseMenu.SetActive(false);
+        gameOverMenu.SetActive(false);
+        levelCompleteMenu.SetActive(false);
+    }
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            instance = this;
-            DontDestroyOnLoad(gameObject); // Prevent GameManager from being destroyed when loading new scenes
-        }
-        else
-        {
-            Destroy(gameObject); // If an instance already exists, destroy this one
-        }
+            if(isPaused)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }    
     }
 
-    public static GameManager Instance
-    {
-        get { return instance; }
+    public void PauseGame()
+    {   
+        // Activate pauseMenu and pause the game
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;  
     }
 
-    public void RestartLevel()
+    public void ResumeGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        // Deactivate pauseMenu and resume the game
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f; 
+        isPaused = false;       
     }
 
-    public void LoadLevel(string levelName)
+       public void GameOver()
     {
-        SceneManager.LoadScene(levelName);
+        // Activate gameOverMenu and stop the game
+        gameOverMenu.SetActive(true);
+        Time.timeScale = 0f;
+        gameOver = true;
+    }
+
+    public void Restart()
+    {
+        // Deactivate gameOverMenu and reload the current scene
+        gameOverMenu.SetActive(false);
+        Time.timeScale = 1f;
+        gameOver = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void LevelComplete(){
+        levelCompleteMenu.SetActive(true);
+        Time.timeScale = 0f;
+        levelComplete = true;
+    }
+
+    public void GoToNextLevel(){
+        Time.timeScale = 1f;
+        levelComplete = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+    }
+
+    public void GoToMainMenu(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Start Menu");
     }
 }
