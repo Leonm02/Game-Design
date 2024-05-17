@@ -7,12 +7,15 @@ public class NewPlayerMovement : MonoBehaviour
     float dirX, moveSpeed = 5f;
     bool isGrounded; // Flag to track if the player is grounded
     Animator animator; // Reference to the Animator component
+    AudioSource audioSource; // Reference to the AudioSource component
+    public AudioClip jumpSound; // Reference to the jump sound clip
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>(); // Get the Animator component
         spriteRenderer = GetComponent<SpriteRenderer>(); // Get the SpriteRenderer component
+        audioSource = GetComponent<AudioSource>(); // Get the AudioSource component
     }
 
     void Update()
@@ -28,8 +31,10 @@ public class NewPlayerMovement : MonoBehaviour
         // Check if the player presses the Jump button and is grounded
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
+            PlayJumpSound(); // Play the jump sound
             rb.AddForce(Vector2.up * 400f);
             isGrounded = false; // Set the grounded flag to false
+
         }
 
         // Update the animation parameters based on the player's movement and jumping state
@@ -72,5 +77,10 @@ public class NewPlayerMovement : MonoBehaviour
         
         // Set the "IsGrounded" parameter in the animator based on whether the player is grounded or not
         animator.SetBool("IsGrounded", isGrounded);
+    }
+
+    void PlayJumpSound()
+    {
+        audioSource.PlayOneShot(jumpSound); // Play the jump sound
     }
 }

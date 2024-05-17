@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,11 +8,14 @@ public class Timer : MonoBehaviour
     public Text timerText; // Reference to the UI text component displaying the timer
     public GameObject player; // Reference to the player GameObject
     public GameObject gameOverScreen; // Reference to the game over screen GameObject
+    public GameObject alarmScreen; // Reference to the alarm screen GameObject
+    public float blinkInterval = 0.5f; // Interval for blinking
 
     public static float currentTime; // Current time left
     private bool isGameOver = false; // Flag to check if the game is over
+    private bool isBlinking = false; // Flag to check if the alarm screen is currently blinking
 
-    void Start()
+    private void Start()
     {
         if (timerText == null)
         {
@@ -31,7 +35,7 @@ public class Timer : MonoBehaviour
         UpdateTimerDisplay();
     }
 
-    void Update()
+    private void Update()
     {
         if (!isGameOver)
         {
@@ -42,10 +46,42 @@ public class Timer : MonoBehaviour
                 GameOver();
             }
             UpdateTimerDisplay();
+
+            // Check if blinking should start
+            if (!isBlinking && currentTime <= 10f)
+            {
+                isBlinking = true;
+                StartCoroutine(BlinkCoroutine()); // Start blinking coroutine
+            }
         }
     }
 
-    void UpdateTimerDisplay()
+    private IEnumerator BlinkCoroutine()
+    {
+        while (isBlinking && !isGameOver) // Check if blinking should continue and the game is not over
+        {
+            alarmScreen.SetActive(!alarmScreen.activeSelf); // Toggle visibility
+            yield return new WaitForSeconds(blinkInterval);
+
+            // Adjust blink interval based on remaining time
+            if (currentTime <= 5f)
+            {
+                blinkInterval = 0.1f; // Faster blinking
+            }
+            else if (currentTime <= 10f)
+            {
+                blinkInterval = 0.5f; // Slower blinking
+            }
+        }
+
+        if (isGameOver)
+        {
+            // Ensure alarm screen is turned off when the game is over
+            alarmScreen.SetActive(false);
+        }
+    }
+
+    private void UpdateTimerDisplay()
     {
         int minutes = Mathf.FloorToInt(currentTime / 60f);
         int seconds = Mathf.FloorToInt(currentTime % 60f);
@@ -56,7 +92,7 @@ public class Timer : MonoBehaviour
             Debug.LogError("Timer: Text component is not assigned. Please assign a Text component to the Timer script.");
     }
 
-    void GameOver()
+    private void GameOver()
     {
         isGameOver = true;
         // Implement your game over logic here
