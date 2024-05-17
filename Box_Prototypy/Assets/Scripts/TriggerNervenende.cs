@@ -7,7 +7,7 @@ public class TriggerNervenende : MonoBehaviour
 {
     public GameObject popupPunishmentTimePrefab;
     public Text textObject;
-    public Transform canvasTransform; 
+    public Transform canvasTransform;
 
     // Start is called before the first frame update
     void Start()

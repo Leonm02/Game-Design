@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3652029851067223614}
   - component: {fileID: 3378563335225520839}
   - component: {fileID: 3548855329279210742}
+  - component: {fileID: -3647482844888085507}
   m_Layer: 0
   m_Name: Nervenende
   m_TagString: Ground
@@ -135,6 +136,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupPunishmentTimePrefab: {fileID: 2675421871012763121, guid: a439d297043324e45a76a9037292d097, type: 3}
+  textObject: {fileID: 0}
+  canvasTransform: {fileID: 0}
+  popuptext: {fileID: 0}
 --- !u!251 &3548855329279210742
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -154,3 +158,16 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &-3647482844888085507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4032004642029186057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1858f79a8f8faa14494df878552c1f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destructTime: 1
