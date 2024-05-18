@@ -27,6 +27,7 @@ public class GameController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Player collided with: " + collision.gameObject.name);
         if (collision.CompareTag("Enemy"))
         {
             Die();
@@ -52,7 +53,7 @@ public class GameController : MonoBehaviour
         spriteRenderer.enabled = true;
 
         // Reset the timer
-        if (timer != null)
+        /* if (timer != null)
         {
             timer.ResetTimer();
         }
@@ -60,6 +61,7 @@ public class GameController : MonoBehaviour
         {
             Debug.LogError("GameController: Timer component is not assigned. Please assign the Timer component in the inspector.");
         }
+        */
     }
 
     void PlayDeathSound()
