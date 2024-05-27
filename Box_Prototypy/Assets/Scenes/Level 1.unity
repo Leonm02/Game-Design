@@ -2397,7 +2397,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6529932, y: -0.59876996, z: -10}
+  m_LocalPosition: {x: -0.9297385, y: -0.59647, z: -10}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2472,8 +2472,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 194, y: -234}
-  m_SizeDelta: {x: 234.24939, y: 60.225403}
+  m_AnchoredPosition: {x: 252.47, y: -245.6}
+  m_SizeDelta: {x: 343.727, y: 99.143}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &578306122
 MonoBehaviour:
@@ -2487,7 +2487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c446379367039654582815c667552447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 60
+  timeLimit: 15
   timerText: {fileID: 578306123}
   player: {fileID: 246942311}
   gameOverScreen: {fileID: 672680315}
@@ -2519,8 +2519,8 @@ MonoBehaviour:
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
-    m_MaxSize: 50
+    m_MinSize: 0
+    m_MaxSize: 100
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1

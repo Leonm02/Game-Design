@@ -196,8 +196,9 @@ public class Timer : MonoBehaviour
     {
         if (timerText != null)
         {
-          Color darkRed = new Color(0.5f, 0f, 0f); // Adjust the values to make it darker
+          Color darkRed = new Color(0.7f, 0f, 0f); // Adjust the values to make it darker
         timerText.color = darkRed;
+         timerText.fontSize = 80;
          timerText.fontStyle = FontStyle.Bold;
         }
     }
