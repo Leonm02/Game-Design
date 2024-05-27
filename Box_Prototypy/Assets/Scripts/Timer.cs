@@ -10,13 +10,26 @@ public class Timer : MonoBehaviour
     public GameObject gameOverScreen; // Reference to the game over screen GameObject
     public GameObject alarmScreen; // Reference to the alarm screen GameObject
     public float blinkInterval = 0.5f; // Interval for blinking
+    public AudioClip alarmSound; // Reference to the alarm sound clip - **New**
 
     public static float currentTime; // Current time left
     private bool isGameOver = false; // Flag to check if the game is over
     private bool isBlinking = false; // Flag to check if the alarm screen is currently blinking
+    private AudioSource audioSource; // Reference to the AudioSource component - **New**
+
+    private Color originalTextColor;
+    private int originalFontSize;
 
     private void Start()
     {
+        // Store the original color and font size
+    if (timerText != null)
+    {
+    originalTextColor = timerText.color;
+    originalFontSize = timerText.fontSize;
+    }
+
+
         if (timerText == null)
         {
             Debug.LogError("Timer: Text component is not assigned. Please assign a Text component to the Timer script.");
@@ -33,6 +46,19 @@ public class Timer : MonoBehaviour
 
         currentTime = timeLimit;
         UpdateTimerDisplay();
+
+
+                // Add or get AudioSource component - **New**
+        audioSource = gameObject.AddComponent<AudioSource>();
+        if (alarmSound != null)
+        {
+            audioSource.clip = alarmSound;
+            audioSource.loop = true; // Loop the alarm sound
+        }
+        else
+        {
+            Debug.LogError("Timer: Alarm sound clip is not assigned. Please assign an AudioClip to the alarmSound variable in the Timer script.");
+        }
     }
 
     private void Update()
@@ -47,6 +73,12 @@ public class Timer : MonoBehaviour
             }
             UpdateTimerDisplay();
 
+            if (currentTime <= 10f && !audioSource.isPlaying)
+            {
+                StartAlarm();
+                MakeTimerTextRedAndBig();
+            }
+
             // Check if blinking should start
             if (!isBlinking && currentTime <= 10f)
             {
@@ -58,6 +90,13 @@ public class Timer : MonoBehaviour
 
     private IEnumerator BlinkCoroutine()
     {
+
+            // Play alarm sound when blinking starts - **New**
+        if (audioSource != null && alarmSound != null)
+        {
+            audioSource.Play();
+        }
+
         while (isBlinking && !isGameOver) // Check if blinking should continue and the game is not over
         {
             alarmScreen.SetActive(!alarmScreen.activeSelf); // Toggle visibility
@@ -72,12 +111,25 @@ public class Timer : MonoBehaviour
             {
                 blinkInterval = 0.5f; // Slower blinking
             }
+
+            if (isGameOver)
+            {
+              alarmScreen.SetActive(false);
+                StopAlarm();
+            }
+
         }
 
         if (isGameOver)
         {
             // Ensure alarm screen is turned off when the game is over
             alarmScreen.SetActive(false);
+        }
+
+                // Stop alarm sound when blinking stops - **New**
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            audioSource.Stop();
         }
     }
 
@@ -91,6 +143,8 @@ public class Timer : MonoBehaviour
         else
             Debug.LogError("Timer: Text component is not assigned. Please assign a Text component to the Timer script.");
     }
+
+
 
     private void GameOver()
     {
@@ -118,7 +172,45 @@ public class Timer : MonoBehaviour
         {
             Debug.LogWarning("Timer: Game Over Screen GameObject is not assigned. Please assign a GameObject to the gameOverScreen variable in the Timer script.");
         }
+        StopAlarm();
     }
+
+        private void StartAlarm()
+    {
+        if (audioSource != null && alarmSound != null)
+        {
+            audioSource.Play();
+        }
+    }
+
+    private void StopAlarm()
+    {
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+         ResetTimerTextAppearance();
+    }
+
+    private void MakeTimerTextRedAndBig()
+    {
+        if (timerText != null)
+        {
+          Color darkRed = new Color(0.5f, 0f, 0f); // Adjust the values to make it darker
+        timerText.color = darkRed;
+         timerText.fontStyle = FontStyle.Bold;
+        }
+    }
+
+    private void ResetTimerTextAppearance()
+    {
+        if (timerText != null)
+        {
+            timerText.color = originalTextColor;
+            timerText.fontSize = originalFontSize;
+        }
+    }
+
 
     public void PunishmentTime(float punishmentSeconds)
     {

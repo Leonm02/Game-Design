@@ -3,7 +3,12 @@ guid: c446379367039654582815c667552447
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - timerText: {instanceID: 0}
+  - player: {instanceID: 0}
+  - gameOverScreen: {instanceID: 0}
+  - alarmScreen: {instanceID: 0}
+  - alarmSound: {fileID: 8300000, guid: 3a7f5aa3a75ba124a8f571e46ae27a0c, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

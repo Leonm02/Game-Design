@@ -2397,7 +2397,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.17329025, y: -0.59296, z: -10}
+  m_LocalPosition: {x: -1.6529932, y: -0.59876996, z: -10}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2493,6 +2493,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 672680315}
   alarmScreen: {fileID: 1614906694}
   blinkInterval: 0.5
+  alarmSound: {fileID: 8300000, guid: 3a7f5aa3a75ba124a8f571e46ae27a0c, type: 3}
 --- !u!114 &578306123
 MonoBehaviour:
   m_ObjectHideFlags: 0
