@@ -24,6 +24,16 @@ public class PlayerCollision : MonoBehaviour
         {
             Debug.Log("Finish Point Collision detected.");
             gameManager.LevelComplete();
+                        Timer timer = FindObjectOfType<Timer>();
+            if (timer != null)
+            {
+                timer.OnFlagTouch();
+            }
+            else
+            {
+                Debug.LogError("PlayerCollisions: Timer script not found.");
+            }
         }
     }
+
 }

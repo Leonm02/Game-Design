@@ -233,6 +233,30 @@ public class Timer : MonoBehaviour
         {
             currentTime = timeLimit;
             UpdateTimerDisplay();
+            ResetAlarmAndTextAppearance();
         }
+    }
+
+        private void ResetAlarmAndTextAppearance()
+    {
+        StopAlarm();
+        ResetTimerTextAppearance();
+        isBlinking = false;
+        alarmScreen.SetActive(false);
+    }
+
+        private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player") && other.gameObject.CompareTag("Finish Point"))
+        {
+            OnFlagTouch();
+        }
+    }
+
+    // New method to handle the flag touch
+    public void OnFlagTouch()
+    {
+        ResetTimer();
+        ResetAlarmAndTextAppearance();
     }
 }
