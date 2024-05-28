@@ -1047,7 +1047,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Main Menu
+  m_text: MAIN MENU
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb8a9e45cc47042429a9cdeb79925f2e, type: 2}
   m_sharedMaterial: {fileID: -2120845903199175323, guid: bb8a9e45cc47042429a9cdeb79925f2e, type: 2}
@@ -2846,7 +2846,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Main Menu
+  m_text: MAIN MENU
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb8a9e45cc47042429a9cdeb79925f2e, type: 2}
   m_sharedMaterial: {fileID: -2120845903199175323, guid: bb8a9e45cc47042429a9cdeb79925f2e, type: 2}
@@ -4020,7 +4020,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Main Menu
+  m_text: MAIN MENU
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb8a9e45cc47042429a9cdeb79925f2e, type: 2}
   m_sharedMaterial: {fileID: -2120845903199175323, guid: bb8a9e45cc47042429a9cdeb79925f2e, type: 2}
@@ -5575,7 +5575,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Try Again
+  m_text: TRY AGAIN
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb8a9e45cc47042429a9cdeb79925f2e, type: 2}
   m_sharedMaterial: {fileID: -2120845903199175323, guid: bb8a9e45cc47042429a9cdeb79925f2e, type: 2}
@@ -6219,7 +6219,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Try Again
+  m_text: NEXT LEVEL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb8a9e45cc47042429a9cdeb79925f2e, type: 2}
   m_sharedMaterial: {fileID: -2120845903199175323, guid: bb8a9e45cc47042429a9cdeb79925f2e, type: 2}
@@ -6726,7 +6726,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Resume
+  m_text: RESUME
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb8a9e45cc47042429a9cdeb79925f2e, type: 2}
   m_sharedMaterial: {fileID: -2120845903199175323, guid: bb8a9e45cc47042429a9cdeb79925f2e, type: 2}

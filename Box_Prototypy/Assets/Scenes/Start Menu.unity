@@ -1433,8 +1433,8 @@ GameObject:
   - component: {fileID: 762675536}
   - component: {fileID: 762675535}
   - component: {fileID: 762675534}
-  - component: {fileID: 762675537}
   - component: {fileID: 762675538}
+  - component: {fileID: 762675537}
   m_Layer: 5
   m_Name: NextLevelButton
   m_TagString: Untagged

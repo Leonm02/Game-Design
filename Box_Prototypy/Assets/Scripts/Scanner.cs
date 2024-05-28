@@ -10,6 +10,7 @@ public class Scanner : MonoBehaviour
     private LineRenderer lineRenderer;
 
     private bool enemiesSpawned = false;
+    private float alpha = 0.5f; // Adjust this value for desired transparency
 
     void Start()
     {
@@ -37,8 +38,12 @@ public class Scanner : MonoBehaviour
         lineRenderer.SetPosition(0, (Vector2)transform.position + lineOffset);
         lineRenderer.SetPosition(1, hitInfo.collider != null ? hitInfo.point : (Vector2)transform.position + rayDirection * distance);
 
-        lineRenderer.startColor = hitInfo.collider != null ? Color.red : Color.green;
-        lineRenderer.endColor = hitInfo.collider != null ? Color.red : Color.green;
+        Color neonTurquoise = new Color(0.25f, 0.88f, 0.82f); // Neon turquoise color
+        Color beamColor = hitInfo.collider != null ? neonTurquoise : neonTurquoise;
+        beamColor.a = alpha; // Set the alpha value
+
+        lineRenderer.startColor = beamColor;
+        lineRenderer.endColor = beamColor;
 
         if (hitInfo.collider != null && hitInfo.collider.CompareTag("Player") && !enemiesSpawned)
         {
