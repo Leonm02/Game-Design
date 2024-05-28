@@ -1492,11 +1492,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!212 &246942344 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 4650123552081350719, guid: 9042ccfd08f427f42a0b0401e3454121, type: 3}
-  m_PrefabInstance: {fileID: 4155985230879630239}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &246942345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1604,6 +1599,7 @@ GameObject:
   - component: {fileID: 296039608}
   - component: {fileID: 296039607}
   - component: {fileID: 296039610}
+  - component: {fileID: 296039611}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -1687,6 +1683,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 296039611}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &296039608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1735,6 +1743,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd14304b78adcee419f50cc6d8bfe92c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &296039611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296039605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac47afb78c26cb94c92d89d460e453ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &377085705
@@ -1879,6 +1899,7 @@ GameObject:
   - component: {fileID: 436568608}
   - component: {fileID: 436568607}
   - component: {fileID: 436568606}
+  - component: {fileID: 436568610}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -1974,6 +1995,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 296039611}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &436568608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2012,6 +2045,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436568604}
   m_CullTransparentMesh: 1
+--- !u!114 &436568610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436568604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac47afb78c26cb94c92d89d460e453ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &444817684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2152,7 +2197,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fd65390ffb7de734b8f3e2dad413de05, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ff181c4035f789b47ba7cbe68f2b4ae3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2172,8 +2217,8 @@ Transform:
   m_GameObject: {fileID: 508373494}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.79, y: -0.45, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: -6.18, y: -1.3, z: 0}
+  m_LocalScale: {x: 0.82603997, y: 0.82603997, z: 0.82603997}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -2300,7 +2345,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.1424723, y: -0.6067, z: -10}
+  m_LocalPosition: {x: -4.142386, y: -0.6067, z: -10}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2353,6 +2398,7 @@ GameObject:
   - component: {fileID: 539887850}
   - component: {fileID: 539887849}
   - component: {fileID: 539887848}
+  - component: {fileID: 539887852}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -2448,6 +2494,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 539887852}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &539887850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2486,6 +2544,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539887846}
   m_CullTransparentMesh: 1
+--- !u!114 &539887852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539887846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac47afb78c26cb94c92d89d460e453ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &578306120
 GameObject:
   m_ObjectHideFlags: 0
@@ -4288,6 +4358,7 @@ GameObject:
   - component: {fileID: 1275404591}
   - component: {fileID: 1275404594}
   - component: {fileID: 1275404595}
+  - component: {fileID: 1275404596}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -4370,6 +4441,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1275404596}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1275404592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4430,6 +4513,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4c57eaf8c98d844f822da73fe32486c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1275404596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275404589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac47afb78c26cb94c92d89d460e453ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1289919877
@@ -4703,6 +4798,7 @@ GameObject:
   - component: {fileID: 1436364670}
   - component: {fileID: 1436364669}
   - component: {fileID: 1436364668}
+  - component: {fileID: 1436364672}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -4798,6 +4894,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1436364672}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1436364670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4836,6 +4944,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436364666}
   m_CullTransparentMesh: 1
+--- !u!114 &1436364672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436364666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac47afb78c26cb94c92d89d460e453ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1477749580
 GameObject:
   m_ObjectHideFlags: 0
@@ -5028,15 +5148,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e1094e45affc625419876599d8af39bb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 804aa5140079ddf4983e14f6e5c7ac53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 39.02694, y: 14.94}
+  m_Size: {x: 2.6, y: 2.47}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1493712746
@@ -5048,8 +5168,8 @@ Transform:
   m_GameObject: {fileID: 1493712744}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.18, y: 0.39, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: -3.19, y: -1.29, z: 0}
+  m_LocalScale: {x: 0.82603997, y: 0.82603997, z: 0.82603997}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -6220,6 +6340,7 @@ GameObject:
   - component: {fileID: 1803465506}
   - component: {fileID: 1803465505}
   - component: {fileID: 1803465504}
+  - component: {fileID: 1803465508}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -6315,6 +6436,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1803465508}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1803465506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6353,6 +6486,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1803465502}
   m_CullTransparentMesh: 1
+--- !u!114 &1803465508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803465502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac47afb78c26cb94c92d89d460e453ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1817694817
 GameObject:
   m_ObjectHideFlags: 0
@@ -6366,6 +6511,7 @@ GameObject:
   - component: {fileID: 1817694821}
   - component: {fileID: 1817694820}
   - component: {fileID: 1817694819}
+  - component: {fileID: 1817694823}
   m_Layer: 5
   m_Name: NextLevelButton
   m_TagString: Untagged
@@ -6461,6 +6607,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1817694823}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1817694821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6499,6 +6657,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1817694817}
   m_CullTransparentMesh: 1
+--- !u!114 &1817694823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817694817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac47afb78c26cb94c92d89d460e453ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1899586354
 GameObject:
   m_ObjectHideFlags: 0
@@ -7174,6 +7344,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8852913406580830596, guid: 9042ccfd08f427f42a0b0401e3454121, type: 3}
       insertIndex: -1
       addedObject: {fileID: 246942338}
+    - targetCorrespondingSourceObject: {fileID: 8852913406580830596, guid: 9042ccfd08f427f42a0b0401e3454121, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 246942345}
+    - targetCorrespondingSourceObject: {fileID: 8852913406580830596, guid: 9042ccfd08f427f42a0b0401e3454121, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 246942346}
   m_SourcePrefab: {fileID: 100100000, guid: 9042ccfd08f427f42a0b0401e3454121, type: 3}
 --- !u!1001 &5349160748419752203
 PrefabInstance:
