@@ -8,6 +8,7 @@ public class Scanner : MonoBehaviour
     public Vector2 lineOffset = Vector2.zero;
     public GameObject enemyPrefab;
     private LineRenderer lineRenderer;
+    public float rotationspeed;
 
     private bool enemiesSpawned = false;
 
@@ -30,6 +31,7 @@ public class Scanner : MonoBehaviour
 
     void Update()
     {
+         transform.Rotate(Vector3.forward * rotationspeed * Time.deltaTime);
         Vector2 rayDirection = -transform.up;
 
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, rayDirection, distance);
@@ -37,8 +39,8 @@ public class Scanner : MonoBehaviour
         lineRenderer.SetPosition(0, (Vector2)transform.position + lineOffset);
         lineRenderer.SetPosition(1, hitInfo.collider != null ? hitInfo.point : (Vector2)transform.position + rayDirection * distance);
 
-        lineRenderer.startColor = hitInfo.collider != null ? Color.red : Color.green;
-        lineRenderer.endColor = hitInfo.collider != null ? Color.red : Color.green;
+        lineRenderer.startColor = hitInfo.collider != null ? Color.red : Color.red;
+        lineRenderer.endColor = hitInfo.collider != null ? Color.red : Color.red;
 
         if (hitInfo.collider != null && hitInfo.collider.CompareTag("Player") && !enemiesSpawned)
         {
