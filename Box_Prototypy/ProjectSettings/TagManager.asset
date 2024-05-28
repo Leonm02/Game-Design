@@ -9,6 +9,7 @@ TagManager:
   - MovingPlatform
   - GM
   - Finish Point
+  - Nervenende
   layers:
   - Default
   - TransparentFX
