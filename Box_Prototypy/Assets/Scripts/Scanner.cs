@@ -5,7 +5,7 @@ public class Scanner : MonoBehaviour
 {
     public float distance;
     public Material lineMaterial;
-    public Vector2 lineOffset = Vector2.zero;
+    public Vector2 lineOffset = new Vector2(0, -0.5f); // Offset nach unten setzen
     public GameObject enemyPrefab;
     private LineRenderer lineRenderer;
     public float rotationspeed;
@@ -32,13 +32,13 @@ public class Scanner : MonoBehaviour
 
     void Update()
     {
-         transform.Rotate(Vector3.forward * rotationspeed * Time.deltaTime);
+        transform.Rotate(Vector3.forward * rotationspeed * Time.deltaTime);
         Vector2 rayDirection = -transform.up;
 
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, rayDirection, distance);
+        RaycastHit2D hitInfo = Physics2D.Raycast((Vector2)transform.position + lineOffset, rayDirection, distance); // Startpunkt des Rays mit Offset
 
         lineRenderer.SetPosition(0, (Vector2)transform.position + lineOffset);
-        lineRenderer.SetPosition(1, hitInfo.collider != null ? hitInfo.point : (Vector2)transform.position + rayDirection * distance);
+        lineRenderer.SetPosition(1, hitInfo.collider != null ? hitInfo.point : (Vector2)transform.position + lineOffset + rayDirection * distance);
 
         Color neonTurquoise = new Color(0.25f, 0.88f, 0.82f); // Neon turquoise color
         Color beamColor = hitInfo.collider != null ? neonTurquoise : neonTurquoise;
@@ -55,7 +55,7 @@ public class Scanner : MonoBehaviour
             if (playerController != null)
             {
                 Debug.Log("Spawning enemies for scanner");
-                GameObject enemy = SpawnEnemiesInRange(hitInfo.collider.transform.position, 3f, 5f); // Änderung hier: Bereich für y-Koordinate festlegen
+                GameObject enemy = SpawnEnemiesInRange(hitInfo.collider.transform.position, 3f, 5f); // Bereich für y-Koordinate festlegen
                 enemiesSpawned = true;
             }
         }
@@ -65,7 +65,7 @@ public class Scanner : MonoBehaviour
     {
         Vector3 spawnPosition = new Vector3(
             playerPosition.x + Random.Range(-5.0f, 5.0f),
-            Mathf.Clamp(playerPosition.y + Random.Range(-5.0f, 5.0f), minY, maxY), // Änderung hier: sicherstellen, dass y im Bereich minY und maxY liegt
+            Mathf.Clamp(playerPosition.y + Random.Range(-5.0f, 5.0f), minY, maxY), // Sicherstellen, dass y im Bereich minY und maxY liegt
             playerPosition.z
         );
         GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
