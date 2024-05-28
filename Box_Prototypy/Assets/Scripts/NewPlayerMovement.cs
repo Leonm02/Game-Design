@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class NewPlayerMovement : MonoBehaviour
@@ -9,6 +10,16 @@ public class NewPlayerMovement : MonoBehaviour
     Animator animator; // Reference to the Animator component
     AudioSource audioSource; // Reference to the AudioSource component
     public AudioClip jumpSound; // Reference to the jump sound clip
+
+    public SpriteRenderer sprite;
+
+  //for Damage Flash Red
+    public IEnumerator FlashRed()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        sprite.color = Color.white;
+    }
 
     void Start()
     {
@@ -56,15 +67,22 @@ public class NewPlayerMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("Ground") || col.gameObject.CompareTag("MovingPlatform"))
+        if (col.gameObject.CompareTag("Ground") || col.gameObject.CompareTag("MovingPlatform") || col.gameObject.CompareTag("Nervenende"))
         {
             isGrounded = true; // Player is grounded when colliding with the ground or platform
         }
+
+        if (col.gameObject.CompareTag("Nervenende") || col.gameObject.CompareTag("Enemy"))
+        {
+            StartCoroutine(FlashRed());
+        }
+
+        
     }
 
     void OnCollisionExit2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("Ground") || col.gameObject.CompareTag("MovingPlatform"))
+        if (col.gameObject.CompareTag("Ground") || col.gameObject.CompareTag("MovingPlatform") || col.gameObject.CompareTag("Nervenende"))
         {
             isGrounded = false; // Player is no longer grounded when leaving the ground or platform
         }
