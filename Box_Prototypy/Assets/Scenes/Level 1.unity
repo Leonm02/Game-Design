@@ -398,9 +398,9 @@ MonoBehaviour:
   pauseMenu: {fileID: 1687199125}
   gameOverMenu: {fileID: 672680315}
   levelCompleteMenu: {fileID: 979536490}
-  levelCompleteSound: {fileID: 0}
-  nextLevelMusic: {fileID: 0}
-  musicSource: {fileID: 0}
+  levelCompleteSound: {fileID: 8300000, guid: b3f65be2c13172044a02fe28d4d68654, type: 3}
+  nextLevelMusic: {fileID: 8300000, guid: 4c0db05d4a3e9604d8c1252ab8a4a379, type: 3}
+  musicSource: {fileID: 1591115136}
   isPaused: 0
   gameOver: 0
   levelComplete: 0
@@ -2345,7 +2345,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.142386, y: -0.6067, z: -10}
+  m_LocalPosition: {x: -1.6322646, y: -0.5987, z: -10}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

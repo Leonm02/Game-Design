@@ -4638,7 +4638,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2592651800798723443, guid: 5705f731cb6b9bf4dbd7b4c8bbad2d70, type: 3}
       propertyPath: m_Name
-      value: CameraBounds (1)
+      value: CameraBounds
       objectReference: {fileID: 0}
     - target: {fileID: 7456010069440648492, guid: 5705f731cb6b9bf4dbd7b4c8bbad2d70, type: 3}
       propertyPath: m_LocalPosition.x

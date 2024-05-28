@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     public bool gameOver;
     public bool levelComplete;
 
+    private AudioClip previousMusic;      // Variable zum Speichern der aktuellen Musik
+    private float previousMusicTime;      // Variable zum Speichern der aktuellen Zeit der Musik
+
     void Start()
     {
         // Ensure pauseMenu is initially inactive
@@ -55,6 +58,24 @@ public class GameManager : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+
+        if (musicSource != null)
+        {
+            // Speichern Sie die aktuelle Musik und Zeit
+            previousMusic = musicSource.clip;
+            previousMusicTime = musicSource.time;
+            musicSource.Stop();  // Stoppen Sie die Hintergrundmusik
+        }
+
+        if (sfxSource != null && levelCompleteSound != null)
+        {
+            Debug.Log("Playing level complete sound.");
+            StartCoroutine(PlayNextLevelMusicAfterSound(levelCompleteSound.length));  // Starten Sie die Coroutine
+        }
+        else
+        {
+            Debug.LogError("SFXSource or LevelCompleteSound is missing!");
+        }
     }
 
     public void ResumeGame()
@@ -63,6 +84,14 @@ public class GameManager : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+
+        if (musicSource != null && previousMusic != null)
+        {
+            // Setzen Sie die vorherige Musik fort
+            musicSource.clip = previousMusic;
+            musicSource.time = previousMusicTime;
+            musicSource.Play();
+        }
     }
 
     public void GameOver()
