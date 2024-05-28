@@ -17,12 +17,24 @@ public class CheckpointsNeu : MonoBehaviour
         gameController = GameObject.FindGameObjectWithTag("Player").GetComponent<GameController>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>(); // Get the AudioSource component
+
+        // Debugging logs to check AudioSource and AudioClip
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource component is missing on the Checkpoint GameObject.");
+        }
+        if (checkpointSound == null)
+        {
+            Debug.LogError("Checkpoint sound clip is not assigned.");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+            Debug.Log("Player entered the checkpoint");
+
             // If the checkpoint has not been reached before, play the sound
             if (!hasBeenReached)
             {
@@ -39,6 +51,7 @@ public class CheckpointsNeu : MonoBehaviour
     {
         if (audioSource != null && checkpointSound != null)
         {
+            Debug.Log("Playing checkpoint sound");
             audioSource.PlayOneShot(checkpointSound); // Play the checkpoint sound
         }
         else
