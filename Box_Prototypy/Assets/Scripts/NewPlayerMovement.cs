@@ -4,22 +4,14 @@ using UnityEngine;
 public class NewPlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
-    SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
+    public SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
     float dirX, moveSpeed = 5f;
     bool isGrounded; // Flag to track if the player is grounded
     Animator animator; // Reference to the Animator component
     AudioSource audioSource; // Reference to the AudioSource component
     public AudioClip jumpSound; // Reference to the jump sound clip
 
-    public SpriteRenderer sprite;
 
-  //for Damage Flash Red
-    public IEnumerator FlashRed()
-    {
-        sprite.color = Color.red;
-        yield return new WaitForSeconds(0.2f);
-        sprite.color = Color.white;
-    }
 
     void Start()
     {
@@ -72,12 +64,20 @@ public class NewPlayerMovement : MonoBehaviour
             isGrounded = true; // Player is grounded when colliding with the ground or platform
         }
 
-        if (col.gameObject.CompareTag("Nervenende") || col.gameObject.CompareTag("Enemy"))
+        if (col.gameObject.CompareTag("Nervenende"))
         {
             StartCoroutine(FlashRed());
         }
 
         
+    }
+
+    //for Damage Flash Red
+    public IEnumerator FlashRed()
+    {
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        spriteRenderer.color = Color.white;
     }
 
     void OnCollisionExit2D(Collision2D col)

@@ -204,6 +204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basic Enemy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 126056103443912482, guid: 94e6c436f5a3eb747a646c9a04dda85b, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 273632039395711767, guid: 94e6c436f5a3eb747a646c9a04dda85b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 28.17
@@ -1410,6 +1414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basic Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 126056103443912482, guid: 94e6c436f5a3eb747a646c9a04dda85b, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 273632039395711767, guid: 94e6c436f5a3eb747a646c9a04dda85b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25.057663
@@ -1755,7 +1763,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.1209435, y: -0.60664, z: -10}
+  m_LocalPosition: {x: -4.1423917, y: -0.6067, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3183,6 +3191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basic Enemy (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 126056103443912482, guid: 94e6c436f5a3eb747a646c9a04dda85b, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 273632039395711767, guid: 94e6c436f5a3eb747a646c9a04dda85b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.54
@@ -3925,6 +3937,10 @@ PrefabInstance:
     - target: {fileID: 126056103443912482, guid: 94e6c436f5a3eb747a646c9a04dda85b, type: 3}
       propertyPath: m_Name
       value: Basic Enemy (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 126056103443912482, guid: 94e6c436f5a3eb747a646c9a04dda85b, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 273632039395711767, guid: 94e6c436f5a3eb747a646c9a04dda85b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5902,6 +5918,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basic Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 126056103443912482, guid: 94e6c436f5a3eb747a646c9a04dda85b, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 273632039395711767, guid: 94e6c436f5a3eb747a646c9a04dda85b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.42
@@ -6147,7 +6167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4032004642029186057, guid: 59f72c66bf2d2214a8cf6a9780bff736, type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: Nervenende
       objectReference: {fileID: 0}
     - target: {fileID: 7033500876198727823, guid: 59f72c66bf2d2214a8cf6a9780bff736, type: 3}
       propertyPath: m_LocalScale.x
@@ -6467,7 +6487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4032004642029186057, guid: 59f72c66bf2d2214a8cf6a9780bff736, type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: Nervenende
       objectReference: {fileID: 0}
     - target: {fileID: 7033500876198727823, guid: 59f72c66bf2d2214a8cf6a9780bff736, type: 3}
       propertyPath: m_LocalScale.x
