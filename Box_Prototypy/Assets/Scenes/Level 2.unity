@@ -2853,7 +2853,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 1170244094}
   gameOverMenu: {fileID: 2010375907}
   levelCompleteMenu: {fileID: 768380506}
-  levelCompleteSound: {fileID: 8300000, guid: b3f65be2c13172044a02fe28d4d68654, type: 3}
+  levelCompleteSound: {fileID: 8300000, guid: d43dad289392e4a498a718a6d2ab2ff5, type: 3}
   nextLevelMusic: {fileID: 8300000, guid: 4c0db05d4a3e9604d8c1252ab8a4a379, type: 3}
   musicSource: {fileID: 1076502116}
   isPaused: 0
@@ -2884,7 +2884,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b3f65be2c13172044a02fe28d4d68654, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d43dad289392e4a498a718a6d2ab2ff5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.192
   m_Pitch: 1
