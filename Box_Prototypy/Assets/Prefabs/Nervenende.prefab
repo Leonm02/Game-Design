@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 3652029851067223614}
   - component: {fileID: 3378563335225520839}
   - component: {fileID: 3548855329279210742}
-  - component: {fileID: -3647482844888085507}
   m_Layer: 0
   m_Name: Nervenende
-  m_TagString: Ground
+  m_TagString: Nervenende
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -10.49, y: -4.03, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.625, z: 1}
+  m_LocalScale: {x: 0.94478786, y: 0.76716745, z: 2.819}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.92941177, g: 0.090196095, b: 0.8980249, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 9f6ba71145703a84aa723262fbf03d2a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -120,9 +119,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 2.1146429e-16, y: -0.011308764}
-  m_Size: {x: 0.99999714, y: 2.007354}
-  m_Direction: 0
+  m_Offset: {x: 0.048801195, y: -0.2764278}
+  m_Size: {x: 2.1392183, y: 0.28255895}
+  m_Direction: 1
 --- !u!114 &3378563335225520839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,10 +134,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60cb26c25afcc8f42af2c30d8c47c09a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popupPunishmentTimePrefab: {fileID: 2675421871012763121, guid: a439d297043324e45a76a9037292d097, type: 3}
+  popupPunishmentTimePrefab: {fileID: 7415498138271055185, guid: a439d297043324e45a76a9037292d097, type: 3}
   textObject: {fileID: 0}
   canvasTransform: {fileID: 0}
-  popuptext: {fileID: 0}
+  alarmScreen: {fileID: 0}
 --- !u!251 &3548855329279210742
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -158,16 +157,3 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!114 &-3647482844888085507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4032004642029186057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1858f79a8f8faa14494df878552c1f14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destructTime: 1
