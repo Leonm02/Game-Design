@@ -2284,6 +2284,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3378563335225520839, guid: 59f72c66bf2d2214a8cf6a9780bff736, type: 3}
+      propertyPath: alarmScreen
+      value: 
+      objectReference: {fileID: 1760655371}
     - target: {fileID: 3938600846558583330, guid: 59f72c66bf2d2214a8cf6a9780bff736, type: 3}
       propertyPath: m_SortingOrder
       value: 10
@@ -2426,6 +2430,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3378563335225520839, guid: 59f72c66bf2d2214a8cf6a9780bff736, type: 3}
+      propertyPath: alarmScreen
+      value: 
+      objectReference: {fileID: 1760655371}
     - target: {fileID: 3938600846558583330, guid: 59f72c66bf2d2214a8cf6a9780bff736, type: 3}
       propertyPath: m_SortingOrder
       value: 10

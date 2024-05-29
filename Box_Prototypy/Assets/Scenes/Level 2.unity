@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3378563335225520839, guid: 59f72c66bf2d2214a8cf6a9780bff736, type: 3}
+      propertyPath: alarmScreen
+      value: 
+      objectReference: {fileID: 508771119}
     - target: {fileID: 4032004642029186057, guid: 59f72c66bf2d2214a8cf6a9780bff736, type: 3}
       propertyPath: m_Name
       value: Nervenende (3)
@@ -5706,6 +5710,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3378563335225520839, guid: 59f72c66bf2d2214a8cf6a9780bff736, type: 3}
+      propertyPath: alarmScreen
+      value: 
+      objectReference: {fileID: 508771119}
     - target: {fileID: 4032004642029186057, guid: 59f72c66bf2d2214a8cf6a9780bff736, type: 3}
       propertyPath: m_Name
       value: Nervenende (4)
@@ -6247,6 +6255,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3378563335225520839, guid: 59f72c66bf2d2214a8cf6a9780bff736, type: 3}
+      propertyPath: alarmScreen
+      value: 
+      objectReference: {fileID: 508771119}
     - target: {fileID: 4032004642029186057, guid: 59f72c66bf2d2214a8cf6a9780bff736, type: 3}
       propertyPath: m_Name
       value: Nervenende (1)
