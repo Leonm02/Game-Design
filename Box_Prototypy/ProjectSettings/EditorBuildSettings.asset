@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: a2c4ae1a8733d614680a96c509f8e916
   - enabled: 1
+    path: Assets/Scenes/StartVideo.unity
+    guid: bb7a35577b260384e96f00e16988c400
+  - enabled: 1
     path: Assets/Scenes/Start Menu.unity
     guid: 3be0e2a4d6bfcb441801b4acdaac0986
   - enabled: 1
